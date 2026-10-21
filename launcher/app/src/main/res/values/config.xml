@@ -123,8 +123,8 @@
          shrink to fit from 5 up (about 144dp at 5, 117dp at 6 on a 1080p TV). -->
     <integer name="columns">4</integer>
 
-    <!-- Basic motion is on; advanced effects are opt-in in the launcher's own Settings screen. -->
-    <bool name="animations">true</bool>
+    <!-- Basic motion is disabled for a low-memory TV; advanced effects are opt-in in the launcher's own Settings screen. -->
+    <bool name="animations">false</bool>
     <bool name="advanced_effects">false</bool>
 
     <!-- Optional Default-home tile; keep this key for existing themes and tile-ordering work.
@@ -136,13 +136,13 @@
 
     <!-- Module cards: an app that declares a card (docs/specs/card.md) can stand in for its tile with its own
          label, caption and glow colour, once you answer Show on the prompt. false: never look for cards or ask. -->
-    <bool name="module_cards">true</bool>
+    <bool name="module_cards">false</bool>
 
     <!-- Reduced motion: for TVs whose GPU cannot keep up (MediaTek MT5895 on Android 10 is the known case).
          true keeps the GPU drawing path but calms the movement: a stiff highlight spring with no bounce,
          tiles that zoom without overshoot, shorter fades and no tile entrance when Home comes back. Set it
          here or with "reduced_motion": true in a theme's config.json; false keeps the normal motion. -->
-    <bool name="reduced_motion">false</bool>
+    <bool name="reduced_motion">true</bool>
 
     <!-- One line under the clock: CPU, free memory and free storage. Off by default; a theme can set
          "show_stats": true. Nothing is read, and the clock does not move, while this is false. -->
